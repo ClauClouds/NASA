@@ -10,3 +10,4 @@ __pycache__/
 .netrc
 .dodsrc
 .urs_cookies
+nasa_env
