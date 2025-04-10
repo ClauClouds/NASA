@@ -1,0 +1,12 @@
+# environments
+.nasa_env
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+
+# file containing credentials
+.netrc
+.dodsrc
+.urs_cookies
