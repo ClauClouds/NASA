@@ -138,6 +138,12 @@ def download_from_list(path_url, file_list_name, destination_folder, lat_min, la
         file_name = file_name.strip()  # Remove any leading/trailing whitespace
         url = path_url + file_name  # Construct the full URL
         
+        # check if file already exists
+        if os.path.exists(os.path.join(destination_folder, file_name)):
+            print(f"File already exists: {file_name}")
+            continue
+        
+        # Download the file
         response = requests.get(url)
         
         if response.status_code == 200:

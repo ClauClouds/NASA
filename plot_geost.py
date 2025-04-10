@@ -31,8 +31,8 @@ def main():
     path_imerg = url_itcz+'/imerg/'
     
     # define date and time for plot
-    day = '2024-01-14'
-    hh = '18'
+    day = '2024-01-30'
+    hh = '11'
     min = '00'
     sec = '00'
     
@@ -143,12 +143,16 @@ def main():
     cb1 = plt.colorbar(mesh1, 
                       ax=ax1, 
                       orientation="vertical", 
-                      pad=0.05, 
+                      pad=0.07, 
                       aspect=16, 
-                      shrink=0.8)
+                      shrink=0.5)
     
     cb1.set_label('Kelvin', size=20)
     cb1.ax.tick_params(labelsize=16)
+    
+    # adjusting figure proportions
+    plt.tight_layout()
+    
     # save figure
     plt.savefig('/net/ostro/ITCZ/plots/'+date_time_str+'_geost.png', 
                 dpi=300, 
@@ -194,13 +198,16 @@ def main():
     cb = plt.colorbar(mesh, 
                       ax=ax2, 
                       orientation="vertical", 
-                      pad=0.05, 
+                      pad=0.07, 
                       aspect=16, 
-                      shrink=0.8)
+                      shrink=0.5)
     
     cb.set_label('mm / hr', size=20)
     cb.ax.tick_params(labelsize=16)
-
+    
+    # adjusting figure proportions
+    plt.tight_layout()
+    
     # save figure
     plt.savefig('/net/ostro/ITCZ/plots/'+date_time_str+'_imerg.png', 
                 dpi=300, 
