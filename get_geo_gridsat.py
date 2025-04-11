@@ -1,7 +1,7 @@
 '''
-Code to list files under an https: address and save them in txt
-format.
-
+Code to download GEOSAT data  https://www.ncei.noaa.gov/products/gridded-geostationary-brightness-temperature
+from NCEI NOAA: gridded geostationary data on 0.07 grid lat equal angle grid. 
+Data have already parallax correction 
 
 
 '''
